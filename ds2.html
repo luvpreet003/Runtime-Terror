@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    .pagination a {
+    color: green;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: green;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: yellow;}
+.container {
+
+    padding: 17px 16px;
+    background-color: white;
+  }
+    .rcorners1 {
+    border-radius: 25px;
+    padding: 20px;
+    width: 1000px;
+    height: 550px;
+}
+a.nounderline {text-decoration: none; }
+</style>
+
+</head>
+<body background="{% static 'images2/Back.jpg' %}">
+  <br><div class="pagination">
+    <a href="#">&laquo;</a>
+    <a class="active" href="challenges">1</a>
+    <a href="challenges2">2</a>
+    <a href="challenges3">3</a>
+     <a href="#">&raquo;</a>
+  </div>
+  <div class="rcorners1">
+  <align="centre">
+  <table cellspacing="20" cellpadding="20"  align="center" >
+  <tr>
+
+
+      <th><a href="challenge6"class="nounderline"><div class="container"><font color="grey">Challenge 6</font></div></a></div>
+  <th><a href="challenge7"class="nounderline"><div class="container"><font color="grey">Challenge 7</font></div></a></th>
+  <th><a href="challenge8"class="nounderline"><div class="container"><font color="grey">Challenge 8</font></div></a></th>
+  <th><a href="challenge9"class="nounderline"><div class="container"><font color="grey">Challenge 9</font></div></a></th>
+  <th><a href="challenge10"class="nounderline"><div class="container"><font color="grey">Challenge 10</font></div></a></th>
+  </tr>
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+  <a class="navbar-brand" href="#"><img src="{% static '' %}" style="display: inline-block;">
+  RunTime Terror
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="home">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="about">About</a>
+        {% if user.is_authenticated %}
+        <span style="color: white">Hello! {{ user.first_name }}</span>
+        <a class="nav-item nav-link" href="logout">Logout</a>
+        {% else %}
+      <a class="nav-item nav-link" href="login">Login</a>
+      <a class="nav-item nav-link " href="register">Register</a>
+        {% endif %}
+    </div>
+  </div>
+        </div>
+</nav>
+</head>
+<body background="{% static 'images2/Video-Webpage-Background.jpg' %}">
+    <h1 style="color: white" ></h1>
+
+
+
+    <div class="container">
+    <div class="jumbotron">
+  <h1 class="display-4">New to RunTime Terror?Register!</h1>
+  <p class="lead"></p>
+
+
+
+</div>
+
+    <form action="register" method="post">
+    {% csrf_token %}<br>
+    <div class="row">
+    <div class="col">
+        <label>First  Name</label>
+      <input type="text" name="first_name" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+        <label>Last Name</label>
+      <input type="text" name="last_name" class="form-control" placeholder="Last name">
+    </div>
+  </div><br>
+
+
+
+      <div class="form-group">
+    <label for="exampleInputUsername1">User Name</label>
+    <input type="text" name="user_name" class="form-control" id="exampleInputUsername3" aria-describedby="emailHelp" placeholder="User Name">
+
+  </div>
+
+     <div class="form-group">
+    <label for="exampleInputUsername1">Email</label>
+    <input type="text" class="form-control" name="email" id="exampleInputUsername3" aria-describedby="emailHelp" placeholder="Email">
+
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="password1" id="exampleInputPassword1" placeholder="Password">
+  </div>
+
+    <div class="form-group">
+    <label for="exampleInputPassword1">Password(again)</label>
+    <input type="password" class="form-control" name="password2" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group form-check">
+
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+    <div>
+        {% for e in messages %}
+            {{ e }}
+        {% endfor %}
+    </div></div>
+</form>
+
+</body>
+</html>

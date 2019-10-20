@@ -1,0 +1,104 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>RunTime Terror</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <div id="header">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+  <a class="navbar-brand" href="#">RT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="index">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="about">About</a>
+        {% if user.is_authenticated %}
+        <span style="color: white">Hello! {{ user.first_name }}</span>
+        <a class="nav-item nav-link" href="logout">Logout</a>
+        {% else %}
+      <a class="nav-item nav-link" href="login">Login</a>
+      <a class="nav-item nav-link " href="register">Register</a>
+        {% endif %}
+    </div>
+  </div>
+        </div>
+</nav>
+
+    </div>
+
+</head>
+
+<body background="{% static 'images2/Video-Webpage-Background.jpg' %}">
+    <div class="container">
+
+
+
+        <div class="jumbotron">
+  <h1 class="display-4">Welcome to RunTime Terror</h1>
+  <p class="lead">RunTime Terror eases the coding experience for school going kids.This website is meant specially<br>
+  for school going kids.</p>
+
+  <hr class="my-4">
+  <p>It uses c language to teach basic coding and knowledge of data-structures.</p>
+  <a class="btn btn-primary btn-lg" href="about" role="button">Learn more</a>
+</div>
+    <div class="h5">
+        <h3>
+  Explore Your Skills
+  <small class="text-muted"></small>
+</h3></div>
+<table>
+    <tr>
+       <td> <div class="section1">
+    <div class="jumbotron">
+ <a href="challenges"><h3 class="display-5">Python challenges</h3></a>
+        <p class="lead">improve your python skills.</p>
+
+</div>
+        </div></td>
+        <td><div class="space"></div> </td>
+        <td></td>
+      <td>  <div class="section2">
+        <div class="jumbotron">
+ <a href="#"> <h3 class="display-5">Algorithms</h3></a>
+  <p class="lead">Master Algos of C</p>
+
+</div></div></td>
+
+    </tr></table>
+<div class="h5">
+        <h3>Tutorials</h3><br></div>
+        <table>
+            <tr>
+                <div class="section1">
+               <td><a href="https://www.youtube.com/watch?v=GBuHSRDGZBY"> <div class="jumbotron">
+  <h1 class="display-4">Interview tips</h1>
+
+  <a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=5KB5KAak6tM" role="button">Click here</a>
+</div></a></div></td>
+                <td><div class="space"></div></td>
+                 <td><div class="jumbotron">
+  <a href="#"> <h1 class="display-4">Learn to code</h1></a>
+
+  <a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" role="button">Click here</a>
+</div></td>
+            </tr>
+        </table>
+
+
+
+
+    </div></body></html> </div>
+
+
+
+
+

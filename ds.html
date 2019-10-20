@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    .pagination a {
+    color: green;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: green;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: yellow;}
+.container {
+
+    padding: 17px 16px;
+    background-color: white;
+  }
+    .rcorners1 {
+    border-radius: 25px;
+    padding: 20px;
+    width: 1000px;
+    height: 550px;
+}
+a.nounderline {text-decoration: none; }
+</style>
+ <nav class="navbar navbar-expand-lg navbar navbar navbar-ligh">
+        <div class="container">
+  <a class="navbar-brand" href="#">RunTime Terror</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="index">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="about">About</a>
+        {% if user.is_authenticated %}
+        <span style="color: white">Hello! {{ user.first_name }}</span>
+        <a class="nav-item nav-link" href="logout">Logout</a>
+        {% else %}
+      <a class="nav-item nav-link" href="login">Login</a>
+      <a class="nav-item nav-link " href="register">Register</a>
+        {% endif %}
+    </div>
+  </div>
+        </div>
+</nav>
+
+
+</head>
+<body background="{% static 'images2/Back.jpg' %}">
+  <br><div class="pagination">
+    <a href="#">&laquo;</a>
+    <a class="active" href="challenges">1</a>
+    <a href="challenges2">2</a>
+    <a href="challenges3">3</a>
+     <a href="#">&raquo;</a>
+  </div>
+  <div class="rcorners1">
+  <align="centre">
+  <table cellspacing="20" cellpadding="20"  align="center" >
+  <tr>
+
+
+      <th><a href="challenge1"class="nounderline"><div class="container"><font color="grey">Challenge 1</font></div></a></div>
+  <th><a href="challenge2"class="nounderline"><div class="container"><font color="grey">Challenge 2</font></div></a></th>
+  <th><a href="challenge3"class="nounderline"><div class="container"><font color="grey">Challenge 3</font></div></a></th>
+  <th><a href="challenge4"class="nounderline"><div class="container"><font color="grey">Challenge 4</font></div></a></th>
+  <th><a href="challenge5"class="nounderline"><div class="container"><font color="grey">Challenge 5</font></div></a></th>
+  </tr>
+
+<
+</body>
+</html>

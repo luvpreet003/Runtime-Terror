@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style5.css' %}">
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+  <a class="navbar-brand" href="#">RunTime Terror</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="home">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="about">About</a>
+        {% if user.is_authenticated %}
+        <span style="color: white">Hello! {{ user.first_name }}</span>
+        <a class="nav-item nav-link" href="logout">Logout</a>
+        {% else %}
+      <a class="nav-item nav-link" href="login">Login</a>
+      <a class="nav-item nav-link " href="register">Register</a>
+        {% endif %}
+    </div>
+  </div>
+        </div>
+</nav>
+
+
+</head>
+
+<body background="{% static 'images2/Video-Webpage-Background.jpg' %}">
+
+    <table>
+        <tr>
+    <td><h1>What coding is</h1>
+    <p>Coding is basically the computer language used to develop apps, websites and software. Without it, we’d have none of the major<br> technology we’ve come to rely on such as Facebook, our smartphones, the browser we choose to view our favorite blogs or even the<br> blogs themselves. It all runs on code.</p></td>
+
+    <td>
+    <div  class="image1">
+        <img src="{% static 'images2/image1.jpg' %}">
+    </div></td></tr></table>
+
+        <div class="heading2">
+        <h1>How it works</h1>
+        <p>To put it very simply, the code is what tells your computer what to do. To go a bit deeper, computers don’t understand words. They<br> only understand the concepts of on and off. The capabilities of a computer are guided by on and off switches or transistors. Binary<br> code represents these on and off transistors as the digits 1 and 0. An infinite number of combinations of these codes make your<br> computer work. In order to make binary code manageable, computer programming languages were formed. These languages each <br>serve different purposes, but they all allow programmers to translate important commands into binary code.</p>
+
+    </div>
+
+<div class="info">
+    <h1>Benefits of Learning Code</h1>
+    <p>Learning coding empowers you to do many things you wouldn’t otherwise be able to do. These things include hand-crafting your own websites,<br> becoming a career coder or even starting a technology business. Most importantly, you’ll be able to understand the technology shaping your world</p>
+    <p>The benefits of learning to code are actually quite vast. No longer do we live in a time when only tech professionals are using<br> this useful language. Being able to utilize the commands of code yourself will enable you to have more control of the technology you <br>depend upon.</p>
+</div>
+
+<div class="info_sub">
+    <p>For example, whether it’s for personal or professional use, more and more people are writing blogs and creating websites to share<br>
+    their message or skills with the world. Being able to understand basic code would allow you to make tweaks to the design of your site<br>
+    without having to pay a webmaster to do it for you or to wait for someone from IT to take care of the ticket you submitted ages ago. A<br>
+    knowledge of code can take you even further if you decide to pursue it. Some in-depth study will provide you with the skills to build a<br>
+    website to your own specifications and to fit your desired needs.</p><br><br>
+    <p>If you find you have a passion for technology and a talent for navigating the in-depth nature of computer languages, you could go on<br>
+    to become a professional coder and work for a tech company or even start your own business venture or launch a best-selling idea.<br>
+    The job market is opening up for technologically savvy professionals.<br><br>
+    <p>Having a basic knowledge of coding can simply help you to have a better understanding of how the technology you use every day<br> works. It’s an empowering feeling.</p>
+</div>
+
+
+
+</body>
+</html>

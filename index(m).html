@@ -1,0 +1,67 @@
+{% load static %}​
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #ff6600;
+}
+
+.right {
+  right: 0;
+  background-image:url("{% static 'images2/download.png' %}")
+  background-size:cover;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+    <img src="{% static 'images2/Logo.png' %}" height="150" width="150"alt="Avatar woman"><br>
+    <br><br><br>
+    <form name="f1">
+        <a href="login" ><h3><button type="button" class="btn btn-light">Login</button> </h3></a><br><br>
+
+      <h6>Need an account?<a href="register">Create an account</a></h6>
+      <<a href="register"><h3><button type="button" class="btn btn-light">Register</button></h3></a> <br><br>
+      <div class="form-group">
+
+        </div>
+      </form>
+  </div>
+</div>
+<div class="split right" >
+
+
+</body>
+</html>
